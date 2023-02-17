@@ -1,6 +1,6 @@
 {
   "name": "my-razzle-app",
-  "version": 4,
+  "version": 2,
   "builds": [
     {
       "src": "build/public/**",
