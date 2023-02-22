@@ -19,3 +19,5 @@ build.*
 *.pem
 # Local Netlify folder
 .netlify
+
+.vercel

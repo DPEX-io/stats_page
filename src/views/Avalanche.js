@@ -111,6 +111,8 @@ function Avalanche(props) {
   // const [aumPerformanceData, aumPerformanceLoading] = useAumPerformanceData(params)
   const [glpPerformanceData, glpPerformanceLoading] = useGlpPerformanceData(glpData, feesData, params)
 
+
+
   const [tradersData, tradersLoading] = useTradersData(params)
   const [totalTradersData, totalTradersLoading] = useTradersData({ chainName: 'avalanche' })
   // console.log("---shark Avalanche");
@@ -334,6 +336,9 @@ function Avalanche(props) {
                 <span style={{color: COLORS[0]}}>% of Index</span> is DPLP with fees / Index Price * 100. Index is a basket 16.6% MATIC, 16.6% BTC, 16.6% ETH and 50% USDC rebalanced once&nbsp;a&nbsp;day
                   <br/>
                 <span style={{color: COLORS[4]}}>% of LP TOKEN-USDC</span> is DPLP Price with fees / LP TOKEN-USDC * 100<br/>
+              </p>
+              <p>
+               DPLP Performance {glpPerformanceData && glpPerformanceData.length >1 ? <span className='dplpPerformanceLatest'>{glpPerformanceData[glpPerformanceData.length -1].performanceSyntheticCollectedFees}</span> : null}
               </p>
             </div>
           </ChartWrapper>
